@@ -82,10 +82,7 @@
     function playAgain() {
         let playAgainvar = prompt("wanna play again?")
         if (playAgainvar.startsWith("y")) {
-            console.log(playAgainvar);
-            let comp = assignCompChoice();
-            let user = getHumanChoice();
-            playRound(comp, user);
+            playGame();
         }
         else {
             if (computerScore == humanScore) {
