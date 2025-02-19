@@ -34,27 +34,40 @@
     function playRound(comp, user) {
         if (comp === user) {
             console.log("its a tie!");
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
         else if (comp.startsWith("r") && user.startsWith("p")) {
             console.log("You win!!");
+            humanScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
         else if (comp.startsWith("r") && user.startsWith("s")) {
             console.log("Computer wins!!");
+            computerScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
         else if (comp.startsWith("p") && user.startsWith("r")) {
             console.log("Computer wins!!");
+            computerScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
 
         else if (comp.startsWith("p") && user.startsWith("s")) {
             console.log("You win!!");
+            humanScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
 
         else if (comp.startsWith("s") && user.startsWith("r")) {
             console.log("You win!!");
+            humanScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
 
         else if (comp.startsWith("s") && user.startsWith("p")) {
             console.log("Computer wins!!");
+            computerScore += 1;
+            console.log("Computer : " + computerScore + " You: " + humanScore);
         }
         playAgain();
     }
@@ -65,6 +78,18 @@
             let comp = assignCompChoice();
             let user = getHumanChoice();
             playRound(comp, user);
+        }
+        else {
+            if (computerScore == humanScore) {
+                console.log("its a tie!")
+            }
+            else if (computerScore > humanScore) {
+                console.log("Compuer won");
+            }
+
+            else {
+                console.log("You won");
+            }
         }
     }
     let comp = assignCompChoice();
