@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <script>
-
     function getComputerChoice() {
         let choice = Math.floor(Math.random() * 3);
         return choice;
@@ -29,6 +28,7 @@
         return (usersChoice);
     }
     function compare() {
+
         let comp = assignCompChoice();
         let user = getInputFromUser();
 
@@ -56,8 +56,16 @@
         else if (comp.startsWith("s") && user.startsWith("p")) {
             console.log("Computer wins!!");
         }
+        playAgain();
+    }
+    function playAgain(){
+        let playAgainvar = prompt("wanna play again?")
+        if(playAgainvar.startsWith("y")){
+        compare();
+    }
     }
     compare();
+    
 </script>
 
 <body>
@@ -67,6 +75,8 @@
     then we need to compare rr pp ss rp rs pr ps sr sp
     with if else or switch case
     then console log
+
+    make the game run in loop if the user says yes 
 </body>
 
 </html>
