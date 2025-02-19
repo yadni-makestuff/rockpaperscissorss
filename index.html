@@ -30,7 +30,14 @@
         let usersChoice = prompt("rock paper scissors!!");
         return (usersChoice);
     }
-
+    function playGame() {
+        for (let index = 0; index < 5; index++) {
+            let comp = assignCompChoice();
+            let user = getHumanChoice();
+            playRound(comp, user);
+        }
+        playAgain();
+    }
     function playRound(comp, user) {
         if (comp === user) {
             console.log("its a tie!");
@@ -69,8 +76,9 @@
             computerScore += 1;
             console.log("Computer : " + computerScore + " You: " + humanScore);
         }
-        playAgain();
+
     }
+
     function playAgain() {
         let playAgainvar = prompt("wanna play again?")
         if (playAgainvar.startsWith("y")) {
@@ -86,15 +94,12 @@
             else if (computerScore > humanScore) {
                 console.log("Compuer won");
             }
-
             else {
                 console.log("You won");
             }
         }
     }
-    let comp = assignCompChoice();
-    let user = getHumanChoice();
-    playRound(comp, user);
+    playGame();
 
 </script>
 
