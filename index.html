@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function getComputerChoice() {
+        let choice = Math.floor(Math.random() * 3);
+        return choice;
+    }
+    function assignCompChoice() {
+        let choice = getComputerChoice();
+        if (choice == 0) {
+            return ("paper");
+        }
+        else if (choice == 1) {
+            return ("scissors");
+        }
+        else if (choice == 2) {
+            return ("rock");
+        }
+    }
+    function getInputFromUser() {
+        let usersChoice = prompt("rock paper scissors!!");
+        return (usersChoice);
+    }
+    function compare() {
+        let comp = assignCompChoice();
+        let user = getInputFromUser();
+
+        if (comp === user) {
+            console.log("its a tie!");
+        }
+        else if (comp.startsWith(r) && user.startsWith(p)) {
+            console.log("User wins!!");
+        }
+        else if(comp.startsWith(r)&& user.startsWith(s)){
+            console.log("Computer wins!!");
+        }
+        else if(comp.startsWith(p)&& user.startsWith(r)){
+            console.log("Computer wins!!");
+        }
+        
+        else if(comp.startsWith(p)&& user.startsWith(s)){
+            console.log("User wins!!");
+        }
+
+        else if(comp.startsWith(s)&& user.startsWith(r)){
+            console.log("User wins!!");
+        }
+
+        else if(comp.startsWith(s)&& user.startsWith(p)){
+            console.log("Computer wins!!");
+        }
+    }
+</script>
+
+<body>
+    computer needs to choose from rock paper scissors
+    we need to pick from either 0 or 1 or 2 for rock paper and scissors respectively
+    then we need to get input from user
+    then we need to compare rr pp ss rp rs pr ps sr sp
+    with if else or switch case
+    then console log
+</body>
+
+</html>
